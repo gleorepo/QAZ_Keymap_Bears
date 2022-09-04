@@ -4,8 +4,8 @@ This repo contains a basic version of my QAZ Keymap. I have stripped out some of
 the combos that are specific to the programs I use regularly for mathematics
 typesetting and programming. However,all of the interesting general-use combos
 are here. 
-
-## The Map
+ 
+## They Keymap 
 ```
 **BASE**  
 Q,W,E,R,T,Y,U,I,O,P,  
@@ -65,3 +65,31 @@ I,O...Kill To End of Line
 U,I...Kill To Start of Line
 ```
 
+## Combo Processor
+
+This repo also contains an R script to process a pair of text files into QMK com
+bo code. It will take care of everything including creating the combo count.  
+
+`keys.txt` holds a list of pipe-separated key abbreviations. Here is a sample
+from mine:  
+```BTN2|KC_BTN2
+MS_R|KC_MS_R
+DOT|MT(MOD_RSFT,KC_DOT)
+COMMA|KC_COMMA
+```
+
+`combos.txt` holds the combos. This also uses pipes to separate fields. The
+syntax is `Combo Description | QMK Code to Execute | Comma-separated list of key
+ abbreviations.` Here is a sample:  
+ ```Mouse Layer|layer_move(_BASE)|MS_R,BTN2
+Base Layer|layer_move(_MOU)|L,S
+Slash|SEND_STRING(SS_TAP(X_SLSH))|COMMA,DOT
+Tab|SEND_STRING(SS_TAP(X_TAB))|A,S
+Escape|SEND_STRING(SS_TAP(X_ESC))|Q,W
+Grave|SEND_STRING(SS_TAP(X_GRV))|W,E
+Backspace|SEND_STRING(SS_TAP(X_BSPC))|O,P
+Backspace|SEND_STRING(SS_TAP(X_BSPC))|J,K
+ ```
+To use the script, simply run `Rscript processor.R`. Of course, you will need R installed o
+n your machine. Do `apt install R-base` or install from binaries on the [R
+Project Website](https://www.r-project.org/). 
