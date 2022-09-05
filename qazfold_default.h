@@ -33,18 +33,4 @@ enum layers {
 
 enum custom_keycodes {
   BASE = SAFE_RANGE,
-  DOMATH,
-  CUT,
-  COPY,
-  PASTE,
-  COPYDOWN, 
-  CUTWORD,
-  COPYWORD,
-  CUTLINE,
-  COPYLINE,
-  LOCK_SHIFT,
-  LINEDOWN,
-  MATHFRAC,
-  MATHENVCENTER,
-  CHAR_JUMP,
 };

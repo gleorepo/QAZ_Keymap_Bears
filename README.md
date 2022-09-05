@@ -4,25 +4,29 @@ This repo contains a basic version of my QAZ Keymap. I have stripped out some of
 the combos that are specific to the programs I use regularly for mathematics
 typesetting and programming. However,all of the interesting general-use combos
 are here. 
- 
-## They Keymap 
+
+Note that this firmware works for both the QAZ and QAZ Fold keyboard. The four e
+xtra QAZ Fold switches are on the bottom row of each layer in the `keymap.c`. If 
+you are using a normal QAZ, your controller will just ignore those keys.
+
+## They Keymap  
 ```
 **BASE**  
 Q,W,E,R,T,Y,U,I,O,P,  
 LT(_NAV,A),S,D,F,G,H,J,K,L,QUOT,  
 MT(MOD_LSFT,Z),X,C,V,B,N,M,COMMA,MT(MOD_RSFT,DOT),  
-LCTL,DYN_REC_START1,DYN_REC_START1,MT(MOD_LCTL,SPACE),LT(_NUM_SYM,SPACE),DYN_MACRO_PLAY1,DYN_MACRO_PLAY1,RALT,  
+LCTL,DYN_REC_START1,DYN_REC_START2,MT(MOD_LCTL,SPACE),LT(_NUM_SYM,SPACE),DYN_MACRO_PLAY1,DYN_MACRO_PLAY2,RALT,  
 
 **NUMBERS**  
 1,2,3,4,5,6,7,8,9,0,  
-TRNS,DYN_REC_START1,DYN_MACRO_PLAY1,F,G,SCLN,MINS,EQL,QUOT,NO,  
-TRNS,DYN_REC_START2,DYN_MACRO_PLAY2,DYN_REC_STOP,TRNS,TRNS,TRNS,LBRC,RBRC,  
-TRNS,TRNS,RGB_MODE_FORWARD,TRNS,TRNS,RGB_VAI,TRNS,TRNS,  
+TRNS,TRNS,TRNS,F,G,SCLN,MINS,EQL,QUOT,NO,  
+TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LBRC,RBRC,  
+TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  
 
 **NAVIGATION**  
 TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,HOME,UP,END,PGUP,  
-TRNS,TRNS,BSPC,DEL,LOCK_SHIFT,TRNS,LEFT,DOWN,RGHT,PGDN,  
-TRNS,CUT,COPY,LCTL(V),TRNS,TRNS,TRNS,TRNS,TRNS,  
+TRNS,TRNS,BSPC,DEL,TRNS,TRNS,LEFT,DOWN,RGHT,PGDN,  
+TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  
 TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  
 
 **MOUSE**  
